@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Action | Open Educational Resource Schema</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            
+    </head>
+    <body >
+        <div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">
+                <img src="/assets/images/logo.png" width="210" height="60" alt="OERSchema" title="OERSchema" class="responsive-img">
+            </a>
+            <ul class="right">
+                <li role="presentation" ><a href="/">Home</a></li>
+                <li role="presentation" class="active"><a href="/docs/schema.html">Schema</a></li>
+                <li role="presentation" ><a href="/docs">Documentation</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+        <main>
+    <div class="schema-content container" vocab="http://oerschema.org/" typeof="rdfs:Class" resource="http://oerschema.org/Action">
+        <h1 property="rdfs:label">Action</h1>
+        
+        
+        <div class="breadcrumbs">
+            <div class="col s12">
+                
+        
+                
+                
+                
+                
+
+
+
+            </div>
+        </div>
+        <p property="rdfs:comment">An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.</p>
+        
+        <table class="class-table schema-table striped">
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Expected Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+        <tbody class="subclass">
+        <tr>
+            <th colspan="3">
+                <link property="rdfs:subClassOf" href="http://oerschema.org/Action">
+                Properties of <a href="/Action">Action</a>
+            </th>
+        </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/actionStatus/">
+                    <td class="property-label" property="rdfs:label"><a href="/actionStatus">actionStatus</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/ActionStatusType">
+                            <a href="/ActionStatusType/">ActionStatusType</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">Indicates the current disposition of the Action.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/agent/">
+                    <td class="property-label" property="rdfs:label"><a href="/agent">agent</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Organization">
+                            <a href="/Organization/">Organization</a> or
+                            <link property="rangeIncludes" href="http://oerschema.org/Person">
+                            <a href="/Person/">Person</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/error/">
+                    <td class="property-label" property="rdfs:label"><a href="/error">error</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Thing">
+                            <a href="/Thing/">Thing</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">For failed actions, more information on the cause of the failure.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/instrument/">
+                    <td class="property-label" property="rdfs:label"><a href="/instrument">instrument</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Thing">
+                            <a href="/Thing/">Thing</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/location/">
+                    <td class="property-label" property="rdfs:label"><a href="/location">location</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Place">
+                            <a href="/Place/">Place</a> or
+                            <link property="rangeIncludes" href="http://oerschema.org/PostalAddress">
+                            <a href="/PostalAddress/">PostalAddress</a> or
+                            <link property="rangeIncludes" href="http://oerschema.org/Text">
+                            <a href="/Text/">Text</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The location of for example where the event is happening, an organization is located, or where an action takes place.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/startTime/">
+                    <td class="property-label" property="rdfs:label"><a href="/startTime">startTime</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/DateTime">
+                            <a href="/DateTime/">DateTime</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December. Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/endTime/">
+                    <td class="property-label" property="rdfs:label"><a href="/endTime">endTime</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/DateTime">
+                            <a href="/DateTime/">DateTime</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*. Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/object/">
+                    <td class="property-label" property="rdfs:label"><a href="/object">object</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Thing">
+                            <a href="/Thing/">Thing</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn&#39;t). e.g. John read *a book*.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/participant/">
+                    <td class="property-label" property="rdfs:label"><a href="/participant">participant</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Organization">
+                            <a href="/Organization/">Organization</a> or
+                            <link property="rangeIncludes" href="http://oerschema.org/Person">
+                            <a href="/Person/">Person</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/result/">
+                    <td class="property-label" property="rdfs:label"><a href="/result">result</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Thing">
+                            <a href="/Thing/">Thing</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The result produced in the action. e.g. John wrote *a book*.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/target/">
+                    <td class="property-label" property="rdfs:label"><a href="/target">target</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/EntryPoint">
+                            <a href="/EntryPoint/">EntryPoint</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">Indicates a target EntryPoint for an Action.</td>
+                </tr>
+        </tbody>
+                
+                    
+        <tbody class="subclass">
+        <tr>
+            <th colspan="3">
+                <link property="rdfs:subClassOf" href="http://oerschema.org/Resource">
+                Properties of <a href="/Resource">Resource</a>
+            </th>
+        </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/parentOf/">
+                    <td class="property-label" property="rdfs:label"><a href="/parentOf">parentOf</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Resource">
+                            <a href="/Resource/">Resource</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">A parent in relation to a child resource.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/childOf/">
+                    <td class="property-label" property="rdfs:label"><a href="/childOf">childOf</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Resource">
+                            <a href="/Resource/">Resource</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">A child in relation to a parent resource.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/objective/">
+                    <td class="property-label" property="rdfs:label"><a href="/objective">objective</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/LearningObjective">
+                            <a href="/LearningObjective/">LearningObjective</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">A learning objective gained as a result of the resource.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/forCourse/">
+                    <td class="property-label" property="rdfs:label"><a href="/forCourse">forCourse</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Course">
+                            <a href="/Course/">Course</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The Course in which the resource is meant for.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/mainContent/">
+                    <td class="property-label" property="rdfs:label"><a href="/mainContent">mainContent</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Text">
+                            <a href="/Text/">Text</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The main content relating to the item.</td>
+                </tr>
+        </tbody>
+                
+                    
+        <tbody class="subclass">
+        <tr>
+            <th colspan="3">
+                <link property="rdfs:subClassOf" href="http://oerschema.org/Thing">
+                Properties of <a href="/Thing">Thing</a>
+            </th>
+        </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/name/">
+                    <td class="property-label" property="rdfs:label"><a href="/name">name</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Text">
+                            <a href="/Text/">Text</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The name of the item.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/additionalType/">
+                    <td class="property-label" property="rdfs:label"><a href="/additionalType">additionalType</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Class">
+                            <a href="/Class/">Class</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/description/">
+                    <td class="property-label" property="rdfs:label"><a href="/description">description</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Text">
+                            <a href="/Text/">Text</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">A short description of the item.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/image/">
+                    <td class="property-label" property="rdfs:label"><a href="/image">image</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/CreativeWork">
+                            <a href="/CreativeWork/">CreativeWork</a> or
+                            <link property="rangeIncludes" href="http://oerschema.org/URL">
+                            <a href="/URL/">URL</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">An image of the item.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/mainEntityOfPage/">
+                    <td class="property-label" property="rdfs:label"><a href="/mainEntityOfPage">mainEntityOfPage</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/CreativeWork">
+                            <a href="/CreativeWork/">CreativeWork</a> or
+                            <link property="rangeIncludes" href="http://oerschema.org/URL">
+                            <a href="/URL/">URL</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/sameAs/">
+                    <td class="property-label" property="rdfs:label"><a href="/sameAs">sameAs</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/URL">
+                            <a href="/URL/">URL</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">URL of a reference Web page that unambiguously indicates the item&#39;s identity. E.g. the URL of the item&#39;s Wikipedia page, Freebase page, or official website.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/uri/">
+                    <td class="property-label" property="rdfs:label"><a href="/uri">uri</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/URL">
+                            <a href="/URL/">URL</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">URL of the item.</td>
+                </tr>
+        </tbody>
+                
+                    <tbody>
+                        <tr>
+                            <th colspan="3">
+                                <link property="rdfs:subClassOf" href="http://schema.org/Thing">
+                                Extends class
+                                
+                                    <a href="http://schema.org/Thing" target="_blank"><b>http://schema.org/Thing</b></a>
+                                
+                            </th>
+                        </tr>
+                    </tbody>
+
+
+                
+                    <tbody>
+                        <tr>
+                            <th colspan="3">
+                                <link property="rdfs:subClassOf" href="http://schema.org/Action">
+                                Extends class
+                                
+                                    <a href="http://schema.org/Action" target="_blank"><b>http://schema.org/Action</b></a>
+                                
+                            </th>
+                        </tr>
+                    </tbody>
+        </table>
+
+        <h2 class="h5">"Action" is the value type for Properties:</h2>
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    <table class="schema-table properties-table striped">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>On Types</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+                
+                <tr>
+                    <td>
+                        <a href="/potentialAction">potentialAction</a>
+                    </td>
+                    <td>
+                                <a href="/Thing">Thing</a><br>
+                    </td>
+                    <td>
+                        Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+        <h2 class="h5">Usage Examples</h2>
+        
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a href="#default" class="active">Without Markup</a></li>
+                <li class="tab col s3"><a href="#rdfa">HTML5+RDFa</a></li>
+                <li class="tab col s3"><a href="#micro">Microdata</a></li>
+                <li class="tab col s3"><a href="#jsonld">JSON+LD</a></li>
+            </ul>
+        </div>
+        <div id="default" class="col s12"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>John listened to Pink with Steve at Anna's apartment on his iPod.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+        </div>
+        <div id="rdfa" class="col s12"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">vocab</span>=<span class="hljs-string">"http://oerschema.org/"</span> <span class="hljs-attr">typeof</span>=<span class="hljs-string">"Action"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">"#agent1"</span> <span class="hljs-attr">typeof</span>=<span class="hljs-string">"Person"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"name"</span>&gt;</span>John<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"name"</span>&gt;</span>listened<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"object"</span>&gt;</span>Pink<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> with
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">"#participant1"</span> <span class="hljs-attr">typeof</span>=<span class="hljs-string">"Person"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"name"</span>&gt;</span>Steve<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> at
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"location"</span>&gt;</span>Anna's apartment<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> on his
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">"#instrument1"</span> <span class="hljs-attr">typeof</span>=<span class="hljs-string">"Thing"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"name"</span>&gt;</span>iPod<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>.
+    <span class="hljs-comment">&lt;!-- Connect complex property types to the Action --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"agent"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#agent1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"participant"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#participant1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"instrument"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#instrument1"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre>
+        </div>
+        <div id="micro" class="col s12"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">itemscope</span> <span class="hljs-attr">itemtype</span>=<span class="hljs-string">"http://oerschema.org/Action"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"agent"</span> <span class="hljs-attr">itemscope</span> <span class="hljs-attr">itemtype</span>=<span class="hljs-string">"http://oerschema.org/Person"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"name"</span>&gt;</span>John<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"name"</span>&gt;</span>listened<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"object"</span>&gt;</span>Pink<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> with
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"participant"</span> <span class="hljs-attr">itemscope</span> <span class="hljs-attr">itemtype</span>=<span class="hljs-string">"http://oerschema.org/Person"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"name"</span>&gt;</span>Steve<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    at <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"location"</span>&gt;</span>Anna's apartment<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> on his <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"instrument"</span>&gt;</span>iPod<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>.
+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre>
+        </div>
+        <div id="jsonld" class="col s12"><pre><code class="hljs html"><span class="hljs-comment">&lt;!--  John listened to Pink with Steve at Anna's apartment on his iPod. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/ld+json"</span>&gt;</span><span class="actionscript">
+{
+  <span class="hljs-string">"@context"</span>: <span class="hljs-string">"http://oerschema.org"</span>,
+  <span class="hljs-string">"@type"</span>: <span class="hljs-string">"Action"</span>,
+  <span class="hljs-string">"agent"</span>: {
+    <span class="hljs-string">"@type"</span>: <span class="hljs-string">"Person"</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"John"</span>
+  },
+  <span class="hljs-string">"object"</span>: {
+    <span class="hljs-string">"@type"</span>: <span class="hljs-string">"Thing"</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Pink!"</span>
+  },
+  <span class="hljs-string">"participant"</span>: {
+    <span class="hljs-string">"@type"</span>: <span class="hljs-string">"Person"</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Steve"</span>
+  },
+  <span class="hljs-string">"location"</span>: {
+    <span class="hljs-string">"@type"</span>: <span class="hljs-string">"Place"</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Ann's apartment"</span>
+  },
+  <span class="hljs-string">"instrument"</span>: {
+    <span class="hljs-string">"@type"</span>: <span class="hljs-string">"Thing"</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"iPod"</span>
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+        </div>
+    </div>
+
+        <h2 class="h5">More specific Types</h2>
+        
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    <ul>
+        
+            <li><a href="/Activity">Activity</a></li>
+        
+            <li><a href="/Assessment">Assessment</a></li>
+        
+    </ul>
+
+    </div>
+</main>
+        <footer class="page-footer">
+    <div class="container">
+
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row text-small font-thin">
+                Content Licensed using MIT License.
+                <div class="right"><a href="https://twitter.com/OerSchema" class="twitter-follow-button" data-show-count="false">Follow @OerSchema</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    </body>
+</html>
