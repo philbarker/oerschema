@@ -25,19 +25,22 @@
     </nav>
 </div>
         <main>
-    <div class="schema-content container" vocab="http://oerschema.org/" typeof="rdfs:Class" resource="http://oerschema.org/">
-        <h1 property="rdfs:label"></h1>
+    <div class="schema-content container" vocab="http://oerschema.org/" typeof="rdfs:Class" resource="http://oerschema.org/LearningComponent">
+        <span class="right blue-grey-text text-lighten-1">v0.2.0</span>
+        <h1 property="rdfs:label">LearningComponent</h1>
         
         
         <div class="breadcrumbs">
             <div class="col s12">
                 
         
-            <a href="/" class="breadcrumb"></a>
+                
+                
+
 
             </div>
         </div>
-        <p property="rdfs:comment"></p>
+        <p property="rdfs:comment">A generic compenent as a base to learning content</p>
         
         <table class="class-table schema-table striped">
             <thead>
@@ -50,14 +53,116 @@
         <tbody class="subclass">
         <tr>
             <th colspan="3">
-                <link property="rdfs:subClassOf" href="http://oerschema.org/">
-                Properties of <a href="/"></a>
+                <link property="rdfs:subClassOf" href="http://oerschema.org/LearningComponent">
+                Properties of <a href="/LearningComponent">LearningComponent</a>
             </th>
         </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/forCourse/">
+                    <td class="property-label" property="rdfs:label"><a href="/forCourse">forCourse</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Course">
+                            <a href="/Course/">Course</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The Course in which the resource is meant for.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/duration/">
+                    <td class="property-label" property="rdfs:label"><a href="/duration">duration</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Enumeration">
+                            <a href="/Enumeration/">Enumeration</a> or
+                            <link property="rangeIncludes" href="http://oerschema.org/Number">
+                            <a href="/Number/">Number</a> or
+                            <link property="rangeIncludes" href="http://oerschema.org/Text">
+                            <a href="/Text/">Text</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The duration of the resource.</td>
+                </tr>
         </tbody>
+                
+                    
+        <tbody class="subclass">
+        <tr>
+            <th colspan="3">
+                <link property="rdfs:subClassOf" href="http://oerschema.org/Resource">
+                Properties of <a href="/Resource">Resource</a>
+            </th>
+        </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/parentOf/">
+                    <td class="property-label" property="rdfs:label"><a href="/parentOf">parentOf</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Resource">
+                            <a href="/Resource/">Resource</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">A parent in relation to a child resource.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/childOf/">
+                    <td class="property-label" property="rdfs:label"><a href="/childOf">childOf</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Resource">
+                            <a href="/Resource/">Resource</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">A child in relation to a parent resource.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/objective/">
+                    <td class="property-label" property="rdfs:label"><a href="/objective">objective</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/LearningObjective">
+                            <a href="/LearningObjective/">LearningObjective</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">A learning objective gained as a result of the resource.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/forCourse/">
+                    <td class="property-label" property="rdfs:label"><a href="/forCourse">forCourse</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Course">
+                            <a href="/Course/">Course</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The Course in which the resource is meant for.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/mainContent/">
+                    <td class="property-label" property="rdfs:label"><a href="/mainContent">mainContent</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Text">
+                            <a href="/Text/">Text</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The main content relating to the item.</td>
+                </tr>
+        </tbody>
+                
+                    <tbody>
+                        <tr>
+                            <th colspan="3">
+                                <link property="rdfs:subClassOf" href="http://schema.org/Thing">
+                                Extends class
+                                
+                                    <a href="http://schema.org/Thing" target="_blank"><b>http://schema.org/Thing</b></a>
+                                
+                            </th>
+                        </tr>
+                    </tbody>
+
+                
+                    <tbody>
+                        <tr>
+                            <th colspan="3">
+                                <link property="rdfs:subClassOf" href="http://schema.org/CreativeWork">
+                                Extends class
+                                
+                                    <a href="http://schema.org/CreativeWork" target="_blank"><b>http://schema.org/CreativeWork</b></a>
+                                
+                            </th>
+                        </tr>
+                    </tbody>
         </table>
 
-        <h2 class="h5">"" is the value type for Properties:</h2>
+        <h2 class="h5">"LearningComponent" is the value type for Properties:</h2>
         
     
         
@@ -90,6 +195,8 @@
         
         
         
+        
+            
         
         
         
@@ -118,8 +225,17 @@
             </tr>
         </thead>
         <tbody>
+                
                 <tr>
-                    <td class="center-align" colspan="3"><em>This type hasn't been used on any properties, yet.</em></td>
+                    <td>
+                        <a href="/prerequisite">prerequisite</a>
+                    </td>
+                    <td>
+                                <a href="/Resource">Resource</a><br>
+                    </td>
+                    <td>
+                        A requirement to be completed before this resource can be performed.
+                    </td>
                 </tr>
         </tbody>
     </table>
@@ -148,6 +264,34 @@
         <h2 class="h5">More specific Types</h2>
         
     
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
     
         
     
@@ -253,7 +397,7 @@
     
     <ul>
         
-            <li><em>This is the most specific of this type.</em></li>
+            <li><a href="/InstructionalPattern">InstructionalPattern</a></li>
         
     </ul>
 
