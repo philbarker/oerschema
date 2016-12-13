@@ -26,7 +26,7 @@
 </div>
         <main>
     <div class="schema-content container" vocab="http://oerschema.org/" typeof="rdfs:Class" resource="http://oerschema.org/LearningObjective">
-        <span class="right blue-grey-text text-lighten-1">v0.2.0</span>
+        <span class="right blue-grey-text text-lighten-1">v0.3.0</span>
         <h1 property="rdfs:label">LearningObjective</h1>
         
         
@@ -38,9 +38,6 @@
                 
                 
                 
-                
-                
-
 
 
 
@@ -82,16 +79,6 @@
         <tbody class="subclass">
         <tr>
             <th colspan="3">
-                <link property="rdfs:subClassOf" href="http://oerschema.org/InstructionalPattern">
-                Properties of <a href="/InstructionalPattern">InstructionalPattern</a>
-            </th>
-        </tr>
-        </tbody>
-                
-                    
-        <tbody class="subclass">
-        <tr>
-            <th colspan="3">
                 <link property="rdfs:subClassOf" href="http://oerschema.org/LearningComponent">
                 Properties of <a href="/LearningComponent">LearningComponent</a>
             </th>
@@ -106,6 +93,24 @@
                     <td class="property-comment" property="rdfs:comment">The Course in which the resource is meant for.</td>
                 </tr>
                 
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/forComponent/">
+                    <td class="property-label" property="rdfs:label"><a href="/forComponent">forComponent</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/LearningComponent">
+                            <a href="/LearningComponent/">LearningComponent</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">Which LearningComponent the resource supports (inverse of hasComponent)</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/hasComponent/">
+                    <td class="property-label" property="rdfs:label"><a href="/hasComponent">hasComponent</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/LearningComponent">
+                            <a href="/LearningComponent/">LearningComponent</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">Which LearningComponent the InstructionalPattern contains or is supported by (inverse of forComponent)</td>
+                </tr>
+                
                 <tr typeof="rdfs:Property" resource="http://oerschema.org/duration/">
                     <td class="property-label" property="rdfs:label"><a href="/duration">duration</a></td>
                     <td class="property-range">
@@ -117,6 +122,35 @@
                             <a href="/Text/">Text</a> 
                     </td>
                     <td class="property-comment" property="rdfs:comment">The duration of the resource.</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/doTask/">
+                    <td class="property-label" property="rdfs:label"><a href="/doTask">doTask</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Task">
+                            <a href="/Task/">Task</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">Which tasks are to be completed for a LearningComponent</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/hasLearningObjective/">
+                    <td class="property-label" property="rdfs:label"><a href="/hasLearningObjective">hasLearningObjective</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/LearningObjective">
+                            <a href="/LearningObjective/">LearningObjective</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">A LearningObjective gained as a result of an InstructionalPattern .</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/deliveryFormat/">
+                    <td class="property-label" property="rdfs:label"><a href="/deliveryFormat">deliveryFormat</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Format">
+                            <a href="/Format/">Format</a> or
+                            <link property="rangeIncludes" href="http://oerschema.org/Text">
+                            <a href="/Text/">Text</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The format used to deliver the resource.</td>
                 </tr>
         </tbody>
                 
@@ -147,15 +181,6 @@
                     <td class="property-comment" property="rdfs:comment">A child in relation to a parent resource.</td>
                 </tr>
                 
-                <tr typeof="rdfs:Property" resource="http://oerschema.org/objective/">
-                    <td class="property-label" property="rdfs:label"><a href="/objective">objective</a></td>
-                    <td class="property-range">
-                            <link property="rangeIncludes" href="http://oerschema.org/LearningObjective">
-                            <a href="/LearningObjective/">LearningObjective</a> 
-                    </td>
-                    <td class="property-comment" property="rdfs:comment">A learning objective gained as a result of the resource.</td>
-                </tr>
-                
                 <tr typeof="rdfs:Property" resource="http://oerschema.org/forCourse/">
                     <td class="property-label" property="rdfs:label"><a href="/forCourse">forCourse</a></td>
                     <td class="property-range">
@@ -173,6 +198,15 @@
                     </td>
                     <td class="property-comment" property="rdfs:comment">The main content relating to the item.</td>
                 </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/forTopic/">
+                    <td class="property-label" property="rdfs:label"><a href="/forTopic">forTopic</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Topic">
+                            <a href="/Topic/">Topic</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The Topic the resource is associated with</td>
+                </tr>
         </tbody>
                 
                     <tbody>
@@ -182,6 +216,18 @@
                                 Extends class
                                 
                                     <a href="http://schema.org/Thing" target="_blank"><b>http://schema.org/Thing</b></a>
+                                
+                            </th>
+                        </tr>
+                    </tbody>
+                
+                    <tbody>
+                        <tr>
+                            <th colspan="3">
+                                <link property="rdfs:subClassOf" href="http://creativecommons.org/ns/#Work">
+                                Extends class
+                                
+                                    <a href="http://creativecommons.org/ns/#Work" target="_blank"><b>http://creativecommons.org/ns/#Work</b></a>
                                 
                             </th>
                         </tr>
@@ -199,7 +245,6 @@
                             </th>
                         </tr>
                     </tbody>
-
 
         </table>
 
@@ -222,21 +267,6 @@
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
             
         
         
@@ -248,6 +278,12 @@
         
         
             
+        
+        
+        
+        
+        
+        
         
         
         
@@ -271,13 +307,13 @@
                 
                 <tr>
                     <td>
-                        <a href="/objective">objective</a>
+                        <a href="/hasLearningObjective">hasLearningObjective</a>
                     </td>
                     <td>
-                                <a href="/Resource">Resource</a><br>
+                                <a href="/InstructionalPattern">InstructionalPattern</a><br>
                     </td>
                     <td>
-                        A learning objective gained as a result of the resource.
+                        A LearningObjective gained as a result of an InstructionalPattern .
                     </td>
                 </tr>
                 
@@ -319,8 +355,6 @@
         <h2 class="h5">More specific Types</h2>
         
     
-    
-        
     
         
     

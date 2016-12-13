@@ -26,7 +26,7 @@
 </div>
         <main>
     <div class="schema-content container" vocab="http://oerschema.org/" typeof="rdfs:Class" resource="http://oerschema.org/Text">
-        <span class="right blue-grey-text text-lighten-1">v0.2.0</span>
+        <span class="right blue-grey-text text-lighten-1">v0.3.0</span>
         <h1 property="rdfs:label">Text</h1>
         
         
@@ -287,27 +287,6 @@
         
         
         
-        
-        
-        
-        
-            
-        
-        
-        
-        
-        
-            
-        
-        
-            
-        
-        
-        
-        
-        
-        
-        
             
         
         
@@ -340,6 +319,14 @@
         
         
             
+        
+        
+            
+        
+        
+        
+        
+        
         
     <table class="schema-table properties-table striped">
         <thead>
@@ -381,7 +368,7 @@
                     </td>
                     <td>
                                 <a href="/Course">Course</a><br>
-                                <a href="/SupportingMaterial">SupportingMaterial</a><br>
+                                <a href="/LearningComponent">LearningComponent</a><br>
                     </td>
                     <td>
                         The format used to deliver the resource.
@@ -440,42 +427,6 @@
                 
                 <tr>
                     <td>
-                        <a href="/itemListElement">itemListElement</a>
-                    </td>
-                    <td>
-                                <a href="/ItemList">ItemList</a><br>
-                    </td>
-                    <td>
-                        For itemListElement values, you can use simple strings (e.g. 'Peter', 'Paul', 'Mary'), existing entities, or use ListItem.<br><br>Text values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.<br><br>Note: The order of elements in your mark-up is not sufficient for indicating the order or elements. Use ListItem with a 'position' property in such cases.
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <a href="/itemListOrder">itemListOrder</a>
-                    </td>
-                    <td>
-                                <a href="/ItemList">ItemList</a><br>
-                    </td>
-                    <td>
-                        Type of ordering (e.g. Ascending, Descending, Unordered).
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <a href="/location">location</a>
-                    </td>
-                    <td>
-                                <a href="/Action">Action</a><br>
-                    </td>
-                    <td>
-                        The location of for example where the event is happening, an organization is located, or where an action takes place.
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
                         <a href="/mainContent">mainContent</a>
                     </td>
                     <td>
@@ -491,10 +442,22 @@
                         <a href="/name">name</a>
                     </td>
                     <td>
-                                <a href="/Thing">Thing</a><br>
+                                <a href="/resour">resour</a><br>
                     </td>
                     <td>
                         The name of the item.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <a href="/skill">skill</a>
+                    </td>
+                    <td>
+                                <a href="/LearningObjective">LearningObjective</a><br>
+                    </td>
+                    <td>
+                        A learned skill obtained by completion of a LearningObjective
                     </td>
                 </tr>
         </tbody>
@@ -618,33 +581,31 @@
         
     
         
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
             
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
         
     
         

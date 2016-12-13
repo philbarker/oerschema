@@ -25,25 +25,20 @@
     </nav>
 </div>
         <main>
-    <div class="schema-content container" vocab="http://oerschema.org/" typeof="rdfs:Class" resource="http://oerschema.org/ItemList">
-        <span class="right blue-grey-text text-lighten-1">v0.2.0</span>
-        <h1 property="rdfs:label">ItemList</h1>
+    <div class="schema-content container" vocab="http://oerschema.org/" typeof="rdfs:Class" resource="http://oerschema.org/">
+        <span class="right blue-grey-text text-lighten-1">v0.3.0</span>
+        <h1 property="rdfs:label"></h1>
         
         
         <div class="breadcrumbs">
             <div class="col s12">
                 
         
-                
-                
-                
-                
-
-
+            <a href="/" class="breadcrumb"></a>
 
             </div>
         </div>
-        <p property="rdfs:comment">A list of items of any sort—for example, Top 10 Movies About Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which are often used only for formatting.</p>
+        <p property="rdfs:comment"></p>
         
         <table class="class-table schema-table striped">
             <thead>
@@ -56,183 +51,16 @@
         <tbody class="subclass">
         <tr>
             <th colspan="3">
-                <link property="rdfs:subClassOf" href="http://oerschema.org/ItemList">
-                Properties of <a href="/ItemList">ItemList</a>
-            </th>
-        </tr>
-                
-                <tr typeof="rdfs:Property" resource="http://oerschema.org/itemListElement/">
-                    <td class="property-label" property="rdfs:label"><a href="/itemListElement">itemListElement</a></td>
-                    <td class="property-range">
-                            <link property="rangeIncludes" href="http://oerschema.org/ListItem">
-                            <a href="/ListItem/">ListItem</a> or
-                            <link property="rangeIncludes" href="http://oerschema.org/Text">
-                            <a href="/Text/">Text</a> or
-                            <link property="rangeIncludes" href="http://oerschema.org/Thing">
-                            <a href="/Thing/">Thing</a> 
-                    </td>
-                    <td class="property-comment" property="rdfs:comment">For itemListElement values, you can use simple strings (e.g. &#39;Peter&#39;, &#39;Paul&#39;, &#39;Mary&#39;), existing entities, or use ListItem.&lt;br&gt;&lt;br&gt;Text values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.&lt;br&gt;&lt;br&gt;Note: The order of elements in your mark-up is not sufficient for indicating the order or elements. Use ListItem with a &#39;position&#39; property in such cases.</td>
-                </tr>
-                
-                <tr typeof="rdfs:Property" resource="http://oerschema.org/itemListOrder/">
-                    <td class="property-label" property="rdfs:label"><a href="/itemListOrder">itemListOrder</a></td>
-                    <td class="property-range">
-                            <link property="rangeIncludes" href="http://oerschema.org/ItemListOrderType">
-                            <a href="/ItemListOrderType/">ItemListOrderType</a> or
-                            <link property="rangeIncludes" href="http://oerschema.org/Text">
-                            <a href="/Text/">Text</a> 
-                    </td>
-                    <td class="property-comment" property="rdfs:comment">Type of ordering (e.g. Ascending, Descending, Unordered).</td>
-                </tr>
-                
-                <tr typeof="rdfs:Property" resource="http://oerschema.org/numberOfItems/">
-                    <td class="property-label" property="rdfs:label"><a href="/numberOfItems">numberOfItems</a></td>
-                    <td class="property-range">
-                            <link property="rangeIncludes" href="http://oerschema.org/Integer">
-                            <a href="/Integer/">Integer</a> 
-                    </td>
-                    <td class="property-comment" property="rdfs:comment">The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g., multi-page pagination); in such cases, the numberOfItems would be for the entire list.</td>
-                </tr>
-        </tbody>
-                
-                    
-        <tbody class="subclass">
-        <tr>
-            <th colspan="3">
-                <link property="rdfs:subClassOf" href="http://oerschema.org/Intangible">
-                Properties of <a href="/Intangible">Intangible</a>
+                <link property="rdfs:subClassOf" href="http://oerschema.org/">
+                Properties of <a href="/"></a>
             </th>
         </tr>
         </tbody>
-                
-                    
-        <tbody class="subclass">
-        <tr>
-            <th colspan="3">
-                <link property="rdfs:subClassOf" href="http://oerschema.org/Thing">
-                Properties of <a href="/Thing">Thing</a>
-            </th>
-        </tr>
-                
-                <tr typeof="rdfs:Property" resource="http://oerschema.org/name/">
-                    <td class="property-label" property="rdfs:label"><a href="/name">name</a></td>
-                    <td class="property-range">
-                            <link property="rangeIncludes" href="http://oerschema.org/Text">
-                            <a href="/Text/">Text</a> 
-                    </td>
-                    <td class="property-comment" property="rdfs:comment">The name of the item.</td>
-                </tr>
-                
-                <tr typeof="rdfs:Property" resource="http://oerschema.org/additionalType/">
-                    <td class="property-label" property="rdfs:label"><a href="/additionalType">additionalType</a></td>
-                    <td class="property-range">
-                            <link property="rangeIncludes" href="http://oerschema.org/Class">
-                            <a href="/Class/">Class</a> 
-                    </td>
-                    <td class="property-comment" property="rdfs:comment">An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.</td>
-                </tr>
-                
-                <tr typeof="rdfs:Property" resource="http://oerschema.org/description/">
-                    <td class="property-label" property="rdfs:label"><a href="/description">description</a></td>
-                    <td class="property-range">
-                            <link property="rangeIncludes" href="http://oerschema.org/Text">
-                            <a href="/Text/">Text</a> 
-                    </td>
-                    <td class="property-comment" property="rdfs:comment">A short description of the item.</td>
-                </tr>
-                
-                <tr typeof="rdfs:Property" resource="http://oerschema.org/image/">
-                    <td class="property-label" property="rdfs:label"><a href="/image">image</a></td>
-                    <td class="property-range">
-                            <link property="rangeIncludes" href="http://oerschema.org/CreativeWork">
-                            <a href="/CreativeWork/">CreativeWork</a> or
-                            <link property="rangeIncludes" href="http://oerschema.org/URL">
-                            <a href="/URL/">URL</a> 
-                    </td>
-                    <td class="property-comment" property="rdfs:comment">An image of the item.</td>
-                </tr>
-                
-                <tr typeof="rdfs:Property" resource="http://oerschema.org/mainEntityOfPage/">
-                    <td class="property-label" property="rdfs:label"><a href="/mainEntityOfPage">mainEntityOfPage</a></td>
-                    <td class="property-range">
-                            <link property="rangeIncludes" href="http://oerschema.org/CreativeWork">
-                            <a href="/CreativeWork/">CreativeWork</a> or
-                            <link property="rangeIncludes" href="http://oerschema.org/URL">
-                            <a href="/URL/">URL</a> 
-                    </td>
-                    <td class="property-comment" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.</td>
-                </tr>
-                
-                <tr typeof="rdfs:Property" resource="http://oerschema.org/sameAs/">
-                    <td class="property-label" property="rdfs:label"><a href="/sameAs">sameAs</a></td>
-                    <td class="property-range">
-                            <link property="rangeIncludes" href="http://oerschema.org/URL">
-                            <a href="/URL/">URL</a> 
-                    </td>
-                    <td class="property-comment" property="rdfs:comment">URL of a reference Web page that unambiguously indicates the item&#39;s identity. E.g. the URL of the item&#39;s Wikipedia page, Freebase page, or official website.</td>
-                </tr>
-                
-                <tr typeof="rdfs:Property" resource="http://oerschema.org/uri/">
-                    <td class="property-label" property="rdfs:label"><a href="/uri">uri</a></td>
-                    <td class="property-range">
-                            <link property="rangeIncludes" href="http://oerschema.org/URL">
-                            <a href="/URL/">URL</a> 
-                    </td>
-                    <td class="property-comment" property="rdfs:comment">URL of the item.</td>
-                </tr>
-        </tbody>
-                
-                    <tbody>
-                        <tr>
-                            <th colspan="3">
-                                <link property="rdfs:subClassOf" href="http://schema.org/Thing">
-                                Extends class
-                                
-                                    <a href="http://schema.org/Thing" target="_blank"><b>http://schema.org/Thing</b></a>
-                                
-                            </th>
-                        </tr>
-                    </tbody>
-
-                
-                    <tbody>
-                        <tr>
-                            <th colspan="3">
-                                <link property="rdfs:subClassOf" href="http://schema.org/Intangible">
-                                Extends class
-                                
-                                    <a href="http://schema.org/Intangible" target="_blank"><b>http://schema.org/Intangible</b></a>
-                                
-                            </th>
-                        </tr>
-                    </tbody>
-
-                
-                    <tbody>
-                        <tr>
-                            <th colspan="3">
-                                <link property="rdfs:subClassOf" href="http://schema.org/ItemList">
-                                Extends class
-                                
-                                    <a href="http://schema.org/ItemList" target="_blank"><b>http://schema.org/ItemList</b></a>
-                                
-                            </th>
-                        </tr>
-                    </tbody>
         </table>
 
-        <h2 class="h5">"ItemList" is the value type for Properties:</h2>
+        <h2 class="h5">"" is the value type for Properties:</h2>
         
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -312,8 +140,6 @@
         <h2 class="h5">More specific Types</h2>
         
     
-    
-        
     
         
     
