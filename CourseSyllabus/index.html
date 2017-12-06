@@ -27,7 +27,7 @@
 </div>
         <main>
     <div class="schema-content container" vocab="http://oerschema.org/" typeof="rdfs:Class" resource="http://oerschema.org/CourseSyllabus">
-        <span class="right blue-grey-text text-lighten-1">v0.3.2</span>
+        <span class="right blue-grey-text text-lighten-1">v0.3.3</span>
         <h1 property="rdfs:label">CourseSyllabus</h1>
         
         
@@ -58,6 +58,15 @@
                 Properties of <a href="/CourseSyllabus">CourseSyllabus</a>
             </th>
         </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/associatedMedia/">
+                    <td class="property-label" property="rdfs:label"><a href="/associatedMedia">associatedMedia</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/http://schema.org/MediaObject">
+                            <a href="/http://schema.org/MediaObject/">http://schema.org/MediaObject</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">Refers to any media referenced by the content</td>
+                </tr>
         </tbody>
                 
                     
@@ -130,10 +139,10 @@
                     <tbody>
                         <tr>
                             <th colspan="3">
-                                <link property="rdfs:subClassOf" href="http://creativecommons.org/ns/#Work">
+                                <link property="rdfs:subClassOf" href="http://creativecommons.org/ns#Work">
                                 Extends class
                                 
-                                    <a href="http://creativecommons.org/ns/#Work" target="_blank"><b>http://creativecommons.org/ns/#Work</b></a>
+                                    <a href="http://creativecommons.org/ns#Work" target="_blank"><b>http://creativecommons.org/ns#Work</b></a>
                                 
                             </th>
                         </tr>
@@ -164,7 +173,11 @@
         
         
         
+        
             
+        
+        
+        
         
         
         
@@ -234,6 +247,8 @@
         <h2 class="h5">More specific Types</h2>
         
     
+    
+        
     
         
     
