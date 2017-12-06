@@ -59,6 +59,15 @@
             </th>
         </tr>
                 
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/section/">
+                    <td class="property-label" property="rdfs:label"><a href="/section">section</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/CourseSection">
+                            <a href="/CourseSection/">CourseSection</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">A specific instance of a course offered during a specific term.</td>
+                </tr>
+                
                 <tr typeof="rdfs:Property" resource="http://oerschema.org/associatedMedia/">
                     <td class="property-label" property="rdfs:label"><a href="/associatedMedia">associatedMedia</a></td>
                     <td class="property-range">
@@ -66,6 +75,15 @@
                             <a href="/http://schema.org/MediaObject/">http://schema.org/MediaObject</a> 
                     </td>
                     <td class="property-comment" property="rdfs:comment">Refers to any media referenced by the content</td>
+                </tr>
+                
+                <tr typeof="rdfs:Property" resource="http://oerschema.org/forCourse/">
+                    <td class="property-label" property="rdfs:label"><a href="/forCourse">forCourse</a></td>
+                    <td class="property-range">
+                            <link property="rangeIncludes" href="http://oerschema.org/Course">
+                            <a href="/Course/">Course</a> 
+                    </td>
+                    <td class="property-comment" property="rdfs:comment">The Course in which the resource is meant for.</td>
                 </tr>
         </tbody>
                 
